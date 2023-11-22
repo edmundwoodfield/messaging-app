@@ -27,7 +27,7 @@ public class MessageWithRealHttpRequestTest {
     @Test
     public void testGettingAllMessages() throws IOException {
 // Run the main application first
-        HttpUriRequest request = new HttpGet("http://localhost:8080/messages");
+        HttpUriRequest request = new HttpGet("http://localhost:8081/messages");
         HttpResponse response = HttpClientBuilder.create().build().execute(request);
         Message[] actualMessages = mapper.readValue(response.getEntity().getContent(), Message[].class);
         Assertions.assertEquals("This is also a message",actualMessages[1].getContent());
@@ -37,7 +37,7 @@ public class MessageWithRealHttpRequestTest {
     @Test
     public void testGettingMessage2() throws IOException {
 // Run the main application first
-        HttpUriRequest request = new HttpGet("http://localhost:8080/messages/2");
+        HttpUriRequest request = new HttpGet("http://localhost:8081/messages/2");
         HttpResponse response = HttpClientBuilder.create().build().execute(request);
         Message actualMessage = mapper.readValue(response.getEntity().getContent(), Message.class);
         Assertions.assertEquals("This is also a message",actualMessage.getContent());

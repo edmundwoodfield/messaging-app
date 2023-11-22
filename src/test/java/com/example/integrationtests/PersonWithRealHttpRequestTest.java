@@ -20,7 +20,7 @@ public class PersonWithRealHttpRequestTest {
     @Test
     public void testGettingAllPersons() throws IOException {
 // Run the main application first
-        HttpUriRequest request = new HttpGet("http://localhost:8080/persons");
+        HttpUriRequest request = new HttpGet("http://localhost:8081/persons");
         HttpResponse response = HttpClientBuilder.create().build().execute(request);
         Person[] actualPersons = mapper.readValue(response.getEntity().getContent(), Person[].class);
         Assertions.assertEquals("Bill",actualPersons[2].getName());
@@ -30,7 +30,7 @@ public class PersonWithRealHttpRequestTest {
     @Test
     public void testGettingPerson3() throws IOException {
 // Run the main application first
-        HttpUriRequest request = new HttpGet("http://localhost:8080/persons/3");
+        HttpUriRequest request = new HttpGet("http://localhost:8081/persons/3");
         HttpResponse response = HttpClientBuilder.create().build().execute(request);
         Person actualPersons = mapper.readValue(response.getEntity().getContent(), Person.class);
         Assertions.assertEquals("Bill",actualPersons.getName());
