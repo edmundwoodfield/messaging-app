@@ -21,6 +21,7 @@ public class GlobalControllerExceptionHandler {
     }
 
     @ExceptionHandler(ItemNotFoundException.class)
+    @ResponseStatus(HttpStatus.NOT_FOUND)
     public ResponseEntity<String> handleItemNotFound(RuntimeException ex) {
         return new ResponseEntity<>(ex.getMessage(), HttpStatus.NOT_FOUND);
         //todo: make the ResponseStatusExceptions behave differently depending on which error they should return
