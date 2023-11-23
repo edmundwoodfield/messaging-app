@@ -20,7 +20,7 @@ import org.springframework.test.context.jdbc.Sql;
 
 import java.io.IOException;
 
- class MessageWithRealHttpRequestTest {
+public class MessageWithRealHttpRequestTest {
 
     ObjectMapper mapper = new ObjectMapper();
     @Disabled("This requires the real app to be running")

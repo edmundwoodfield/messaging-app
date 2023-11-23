@@ -24,7 +24,7 @@ import static org.mockito.Mockito.*;
 
 @WebMvcTest(PersonController.class)
 @AutoConfigureMockMvc
- class PersonControllerTest {
+public class PersonControllerTest {
     ObjectMapper mapper = new ObjectMapper();
 
     @MockBean

@@ -17,7 +17,7 @@ import static org.mockito.Mockito.verify;
 
 @WebMvcTest(MessageController.class)
 @AutoConfigureMockMvc
-class MessageControllerTestSpring {
+public class MessageControllerTestSpring {
 
     @MockBean
     MessageService mockMessageService;

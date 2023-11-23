@@ -13,7 +13,7 @@ import org.junit.jupiter.api.Test;
 
 import java.io.IOException;
 
- class PersonWithRealHttpRequestTest {
+public class PersonWithRealHttpRequestTest {
 
     ObjectMapper mapper = new ObjectMapper();
     @Disabled("This requires the real app to be running")

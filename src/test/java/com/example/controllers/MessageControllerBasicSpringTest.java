@@ -13,7 +13,7 @@ import static org.mockito.Mockito.times;
 import static org.mockito.Mockito.verify;
 
 @SpringBootTest
- class MessageControllerBasicSpringTest {
+public class MessageControllerBasicSpringTest {
     @Autowired
     MessageController messageController;
     @MockBean

@@ -13,7 +13,7 @@ import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
 
 //@SpringBootTest
-class MessageControllerTest {
+public class MessageControllerTest {
     MessageService mockMessageService = mock(MessageService.class);
     MessageController messageController = new MessageController(mockMessageService);
 @BeforeEach
