@@ -13,10 +13,10 @@ import org.junit.jupiter.api.Test;
 
 import java.io.IOException;
 
-public class PersonWithRealHttpRequestTest {
+ class PersonWithRealHttpRequestTest {
 
     ObjectMapper mapper = new ObjectMapper();
-    @Disabled
+    @Disabled("This requires the real app to be running")
     @Test
     public void testGettingAllPersons() throws IOException {
 // Run the main application first
@@ -26,7 +26,7 @@ public class PersonWithRealHttpRequestTest {
         Assertions.assertEquals("Bill",actualPersons[2].getName());
 
     }
-    @Disabled
+    @Disabled("This requires the real app to be running")
     @Test
     public void testGettingPerson3() throws IOException {
 // Run the main application first

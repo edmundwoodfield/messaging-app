@@ -3,15 +3,14 @@ package com.example.controllers;
 import com.example.entities.Message;
 import com.example.errors.InvalidRequestException;
 import com.example.errors.ItemNotFoundException;
-import com.example.views.Views;
 import com.example.services.MessageService;
+import com.example.views.Views;
 import com.fasterxml.jackson.annotation.JsonView;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.server.ResponseStatusException;
 
 import java.util.List;
 

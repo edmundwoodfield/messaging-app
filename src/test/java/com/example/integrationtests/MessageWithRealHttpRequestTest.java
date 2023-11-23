@@ -20,10 +20,10 @@ import org.springframework.test.context.jdbc.Sql;
 
 import java.io.IOException;
 
-public class MessageWithRealHttpRequestTest {
+ class MessageWithRealHttpRequestTest {
 
     ObjectMapper mapper = new ObjectMapper();
-    @Disabled
+    @Disabled("This requires the real app to be running")
     @Test
     public void testGettingAllMessages() throws IOException {
 // Run the main application first
@@ -33,7 +33,7 @@ public class MessageWithRealHttpRequestTest {
         Assertions.assertEquals("This is also a message",actualMessages[1].getContent());
 
     }
-    @Disabled
+    @Disabled("This requires the real app to be running")
     @Test
     public void testGettingMessage2() throws IOException {
 // Run the main application first
